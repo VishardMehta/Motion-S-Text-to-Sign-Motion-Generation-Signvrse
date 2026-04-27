@@ -4,7 +4,21 @@
 
 ![Skeleton Animation](skeleton_animation.gif)
 
+---
+
+## Visualizations
+
+### Generated Token Heatmap
 ![Generated Tokens](generated-token.png)
+
+### Token Distribution per Codebook Layer
+![Token Distribution](token-distribution.png)
+
+### Token Entropy per Layer
+![Token Entropy](token-entropy.png)
+
+### Inter-Layer Token Correlation
+![Inter-Layer Token Correlation](Inter-layer-token.png)
 
 ---
 
@@ -83,18 +97,5 @@ All outputs clamped to `[0, 511]` and padded/truncated to ensure consistent leng
 ├── generated-token.png           # token heatmap visualization
 ├── token-distribution.png        # token distribution per codebook layer
 ├── token-entropy.png             # Shannon entropy per layer
-├── Inter-layer-token.png         # inter-layer token correlation heatmap
-└── submission.csv                # final predictions
+└── Inter-layer-token.png         # inter-layer token correlation heatmap
 ```
-
----
-
-## Analysis plots
-
-| Plot | What it shows |
-|------|--------------|
-| `generated-token.png` | Per-layer token heatmap for generated sequences |
-| `token-distribution.png` | Token frequency across all 512 vocab entries per layer |
-| `token-entropy.png` | Shannon entropy per layer — validates base > residual hierarchy |
-| `Inter-layer-token.png` | Pearson correlation between layers — detects codebook redundancy |
-| `skeleton_animation.gif` | Forward kinematics BVH reconstruction of a training sample |
